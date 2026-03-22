@@ -3,7 +3,7 @@ export function AppFooter() {
   return (
     <footer className="jna-app-footer" role="contentinfo">
       <div className="jna-app-footer__inner">
-        <p>© {year} Job Notification App</p>
+        <p>© {year} Job Notification Tracker</p>
         <nav className="jna-app-footer__links" aria-label="Legal">
           <a href="#">Privacy</a>
           <a href="#">Terms</a>

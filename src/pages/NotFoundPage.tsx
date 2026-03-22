@@ -7,7 +7,7 @@ export function NotFoundPage() {
       <header className="jna-shell-header jna-shell-header--minimal" role="banner">
         <div className="jna-shell-bar">
           <Link to="/" className="jna-topbar__brandlink">
-            Job Notification App
+            Job Notification Tracker
           </Link>
         </div>
       </header>

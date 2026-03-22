@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useId, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
 
 const NAV_ITEMS = [
   { to: "/dashboard", label: "Dashboard" },
@@ -15,7 +14,6 @@ function navLinkClassName({ isActive }: { isActive: boolean }) {
 }
 
 export function AppTopNav() {
-  const { user, logout } = useAuth();
   const location = useLocation();
   const panelId = useId();
   const [open, setOpen] = useState(false);
@@ -36,8 +34,8 @@ export function AppTopNav() {
   return (
     <header className="jna-shell-header" role="banner">
       <div className="jna-shell-bar">
-        <Link to="/dashboard" className="jna-topbar__brandlink">
-          Job Notification App
+        <Link to="/" className="jna-topbar__brandlink">
+          Job Notification Tracker
         </Link>
 
         <nav className="jna-nav-desktop" aria-label="Main">
@@ -60,9 +58,6 @@ export function AppTopNav() {
         </nav>
 
         <div className="jna-shell-bar__end">
-          <span className="jna-muted jna-clamp-user jna-shell-user" aria-hidden={!user?.name}>
-            {user?.name}
-          </span>
           <button
             type="button"
             className="jna-nav-toggle"
@@ -74,9 +69,6 @@ export function AppTopNav() {
             <span className="jna-nav-toggle__bar" />
             <span className="jna-nav-toggle__bar" />
             <span className="jna-nav-toggle__bar" />
-          </button>
-          <button type="button" className="jna-btn jna-btn--secondary jna-shell-signout" onClick={() => logout()}>
-            Sign out
           </button>
         </div>
       </div>
@@ -92,11 +84,6 @@ export function AppTopNav() {
               </li>
             ))}
           </ul>
-          <div className="jna-nav-drawer__foot">
-            <button type="button" className="jna-btn jna-btn--secondary jna-btn--block" onClick={() => logout()}>
-              Sign out
-            </button>
-          </div>
         </nav>
       </div>
     </header>

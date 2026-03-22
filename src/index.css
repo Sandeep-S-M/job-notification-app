@@ -339,26 +339,6 @@
   }
 }
 
-.jna-shell-signout {
-  display: none;
-}
-
-@media (min-width: 720px) {
-  .jna-shell-signout {
-    display: inline-flex;
-  }
-}
-
-.jna-shell-user {
-  display: none;
-}
-
-@media (min-width: 720px) {
-  .jna-shell-user {
-    display: inline;
-  }
-}
-
 .jna-nav-drawer {
   display: block;
   max-height: 0;
@@ -414,17 +394,306 @@
   padding: var(--space-18) 0;
 }
 
-.jna-nav-drawer__foot {
-  margin-top: var(--space-24);
-  padding-top: var(--space-18);
-  border-top: 1px solid var(--color-line);
-}
-
-.jna-btn--block {
-  width: 100%;
-}
-
 .jna-notfound-linkwrap {
   margin-top: var(--space-24);
   margin-bottom: 0;
+}
+
+/* Landing */
+.jna-landing-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--space-64);
+  padding-bottom: var(--space-64);
+}
+
+.jna-landing-hero {
+  max-width: var(--measure-text);
+}
+
+.jna-landing-headline {
+  margin-bottom: var(--space-24);
+}
+
+.jna-landing-sub {
+  margin-bottom: 0;
+}
+
+.jna-landing-cta {
+  margin-top: var(--space-40);
+}
+
+.jna-landing-cta .jna-btn {
+  text-decoration: none;
+}
+
+/* Settings placeholders */
+.jna-settings-form {
+  max-width: var(--measure-text);
+}
+
+.jna-settings-card .jna-field--last {
+  margin-bottom: 0;
+}
+
+.jna-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%235c5c5c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-18) center;
+  padding-right: var(--space-40);
+}
+
+/* Empty states */
+.jna-empty-premium {
+  max-width: var(--measure-text);
+}
+
+.jna-empty-premium p {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.jna-empty-results {
+  margin-top: var(--space-24);
+}
+
+/* Job board */
+.jna-job-board {
+  padding-bottom: var(--space-64);
+}
+
+.jna-filter-bar {
+  margin-bottom: var(--space-40);
+  max-width: 100%;
+}
+
+.jna-filter-bar__grid {
+  display: grid;
+  gap: var(--space-24);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .jna-filter-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .jna-filter-bar__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.jna-field--filter {
+  margin-bottom: 0;
+}
+
+.jna-input--full {
+  max-width: none;
+}
+
+.jna-job-card-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-24);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .jna-job-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Job cards */
+.jna-job-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.jna-job-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  margin-bottom: var(--space-18);
+}
+
+.jna-job-card__posted {
+  font-size: var(--text-caption);
+  color: var(--color-muted);
+}
+
+.jna-job-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--space-8);
+  color: var(--color-ink);
+}
+
+.jna-job-card__company {
+  margin: 0 0 var(--space-18);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.jna-job-card__meta {
+  margin: 0 0 var(--space-24);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  font-size: var(--text-body-sm);
+  color: var(--color-muted);
+}
+
+.jna-job-card__meta dd {
+  margin: 0;
+}
+
+.jna-job-card__salary {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.jna-job-card__sep {
+  color: var(--color-line-strong);
+}
+
+.jna-job-card__actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-18);
+}
+
+/* Modal */
+.jna-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24);
+}
+
+.jna-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(17, 17, 17, 0.2);
+  cursor: pointer;
+  transition: background-color var(--duration) var(--easing);
+}
+
+.jna-modal-backdrop:hover {
+  background: rgba(17, 17, 17, 0.24);
+}
+
+.jna-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--measure-text);
+  max-height: min(90vh, 880px);
+  overflow: auto;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-40);
+}
+
+.jna-modal-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-18);
+  margin-bottom: var(--space-18);
+}
+
+.jna-modal-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  margin: 0;
+  max-width: 85%;
+  color: var(--color-ink);
+}
+
+.jna-modal-close {
+  min-height: 40px;
+  padding: 0 var(--space-18);
+}
+
+.jna-modal-company {
+  margin: 0 0 var(--space-8);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.jna-modal-subtle {
+  margin: 0 0 var(--space-18);
+  font-size: var(--text-caption);
+  color: var(--color-muted);
+  line-height: var(--leading-body);
+}
+
+.jna-modal-section {
+  margin-top: var(--space-24);
+}
+
+.jna-modal-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-18);
+  color: var(--color-ink);
+}
+
+.jna-modal-description p {
+  margin: 0 0 var(--space-18);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
+  color: var(--color-ink);
+  max-width: none;
+}
+
+.jna-modal-description p:last-child {
+  margin-bottom: 0;
+}
+
+.jna-modal-skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.jna-modal-footer {
+  margin-top: var(--space-40);
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-18);
 }
