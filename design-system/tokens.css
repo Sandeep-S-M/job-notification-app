@@ -1,0 +1,50 @@
+/**
+ * Job Notification App — design tokens
+ * Foundation only. Consume via var(--token-name).
+ */
+
+:root {
+  /* Colors — calm B2C palette (no gradients, no neon) */
+  --color-canvas: #f7f6f3;
+  --color-ink: #111111;
+  --color-accent: #880000;
+  --color-accent-hover: #6d0000;
+  --color-line: #d9d6d0;
+  --color-line-strong: #c4c0b8;
+  --color-muted: #5c5c5c;
+  --color-success: #4f6f52;
+  --color-success-surface: #e8efe9;
+  --color-warning: #9a7b4f;
+  --color-warning-surface: #f2ebe0;
+  --color-error-surface: #f3e8e8;
+  --color-on-accent: #ffffff;
+  /* Slightly lifted surface (still within off-white family; not pure white) */
+  --color-surface-raised: #f2f1ed;
+
+  /* Typography */
+  --font-serif: "Source Serif 4", "Georgia", "Times New Roman", serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-body: 1.0625rem; /* 17px */
+  --text-body-sm: 1rem; /* 16px */
+  --text-caption: 0.875rem; /* 14px — UI labels, badges */
+  --leading-body: 1.65;
+  --leading-tight: 1.25;
+  --measure-text: 720px;
+
+  /* Spacing scale — use only these values */
+  --space-8: 8px;
+  --space-18: 18px;
+  --space-24: 24px;
+  --space-40: 40px;
+  --space-64: 64px;
+
+  /* Radius — single radius everywhere */
+  --radius: 6px;
+
+  /* Motion — subtle, no bounce */
+  --duration: 180ms;
+  --easing: ease-in-out;
+
+  /* Layout */
+  --top-bar-height: 56px;
+}
